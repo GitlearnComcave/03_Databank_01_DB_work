@@ -27,4 +27,24 @@ INSERT INTO boo.users (userName, familyName, firstName, userPwd)
 VALUES ('michaelsmith7', 'Smith', 'Michael',SHA1('user1234'));
 
 /* Inhalte : Ergebnistabelle */
+-- SELECT * FROM boo.users;
+
+/* Änderungen an bestehender Tabelle / Struktur*/
+ALTER TABLE
+    boo.users
+ADD
+    userPLZ VARCHAR(5) NOT NULL DEFAULT "00000"
+;
+
+/* Struktur + Inhalt */
+DESCRIBE boo.users;
+SELECT * FROM boo.users;
+
+/* Update vo Daten */
+-- UPDATE boo.users SET userPLZ = "70367";
+
+UPDATE boo.users SET userPLZ = "70367" WHERE id= 1;
+UPDATE boo.users SET userPLZ = "70368" WHERE firstName = 'Emily';
+UPDATE boo.users SET userPLZ = "70369" WHERE familyName = 'Smith';
+
 SELECT * FROM boo.users;
