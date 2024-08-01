@@ -18,6 +18,11 @@ USE boo;
 
 
 /* Tab. test anlegen, falls noch nicht vorhanden*/
+CREATE TABLE test
+(
+	name VARCHAR(20),
+	age INT
+);
 
 
 /* Alle Tabellen in der DB anzeigen */
